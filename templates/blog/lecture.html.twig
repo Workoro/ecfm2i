@@ -1,0 +1,35 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+	{{produit.Nom}}|
+	{{parent()}}
+{% endblock %}
+{% block body %}
+	<div class="container">
+		<div class="row">
+			<div class="col col-12">
+				<h2 class="text-center">{{produit.Nom}}</h2>
+				<p class="text-center">
+					<img src="{{produit.Image}}" class="img-fluid" style="max-width:450px">
+				</p>
+			</div>
+		</div>
+		<div class="row=">
+			<div class="col col-12">
+				<p class="text-justify">
+					{{produit.DescriptionCourte}}
+				</p>
+			</div>
+		</div>
+		<div class="row=">
+			<div class="col col-12">
+				<p class="text-center">
+					{{produit.Tarif}}€
+				</p>
+			</div>
+		</div>
+		{% include "parts/form.html.twig" %}
+
+	</div>>>
+
+{% endblock %}
